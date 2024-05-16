@@ -50,7 +50,7 @@ def printBoard(board):
     for row in range(len(board)):
         toPrint = ""
         for col in range(len(board[row])):
-            if col % 3 == 0:
+            if col % 3 == 0 and col != 0:
                 toPrint += " | "
             toPrint += f" {board[row][col]} "
         

@@ -24,6 +24,7 @@ stateStack = [initialState]
 hasSolution = False
 
 curState = stateStack.pop()
+
 while curState and not hasSolution:
     # find empty position
     pos = findEmptyPosition(curState.board)
@@ -39,7 +40,6 @@ while curState and not hasSolution:
             curState.action = i
             stateStack.append(curState)
             stateStack.append(newState)
-
             break
     # set curState
     try:
